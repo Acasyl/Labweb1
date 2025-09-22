@@ -2,16 +2,20 @@
 
 ## Penjelasan Struktur Kode
 
-1. Deklarasi Dokumen
+---
+
+###  Penjelasan Struktur Kode
+
+1. **Deklarasi Dokumen**
 
    ```html
    <!DOCTYPE html>
    <html>
    ```
 
-   Menandakan bahwa dokumen ini adalah *HTML5*.
+   → Menandakan bahwa dokumen ini adalah **HTML5**.
 
-2. *Bagian `<head>`*
+2. **Bagian `<head>`**
 
    ```html
    <head>
@@ -20,12 +24,12 @@
    </head>
    ```
 
-   `<title>` : Menentukan judul tab browser.
-    `<meta charset="UTF-8">` : Supaya teks mendukung karakter Unicode (huruf, simbol, dll).
+   * `<title>` : Menentukan judul tab browser.
+   * `<meta charset="UTF-8">` : Supaya teks mendukung karakter Unicode (huruf, simbol, dll).
 
-3. *Bagian `<body>`*
+3. **Bagian `<body>`**
 
-    *Navigasi*
+   * **Navigasi**
 
      ```html
      <nav> 
@@ -36,9 +40,9 @@
      <hr>
      ```
 
-    Membuat menu navigasi dengan link ke halaman internal dan eksternal, lalu dipisahkan dengan garis `<hr>`.
+      Membuat menu navigasi dengan link ke halaman internal dan eksternal, lalu dipisahkan dengan garis `<hr>`.
 
-    *Identitas Mahasiswa*
+   * **Identitas Mahasiswa**
 
      ```html
      <h1>Belajar Dasar HTML</h1>
@@ -47,9 +51,9 @@
      <p> Kelas: TI.24.A2</p>
      ```
 
-     Menggunakan heading `<h1>` untuk judul utama, lalu `<p>` untuk paragraf identitas.
+      Menggunakan heading `<h1>` untuk judul utama, lalu `<p>` untuk paragraf identitas.
 
-    *Paragraf dengan format teks*
+   * **Paragraf dengan format teks**
 
      ```html
      <p> 
@@ -60,14 +64,14 @@
      </p>
      ```
 
-     Menampilkan teks dengan format:
+      Menampilkan teks dengan format:
 
-     * `<mark>` : memberi highlight.
-     * `<b>` : cetak tebal.
-     * `<i>` : cetak miring.
-     * `<a>` : hyperlink.
+     * `<mark>` → memberi highlight.
+     * `<b>` → cetak tebal.
+     * `<i>` → cetak miring.
+     * `<a>` → hyperlink.
 
-    *Subjudul dan Paragraf*
+   * **Subjudul dan Paragraf**
 
      ```html
      <h2>Paragraf pada HTML</h2>
@@ -76,26 +80,26 @@
 
       `<h2>` untuk subjudul, `<p>` untuk isi paragraf.
 
-    *Subjudul + Gambar*
+   * **Subjudul + Gambar**
 
      ```html
      <h3>UNIVERSITAS PELITA BANGSA </h3>
      <img src="Logo-Universitas-Pelita-Bangsa.png" width="300" alt="Logo Universitas Pelita Bangsa.png" title="Logo Universitas Pelita Bangsa">
-     
+     ```
 
-     `<img>` menampilkan gambar logo, dengan atribut:
+      `<img>` menampilkan gambar logo, dengan atribut:
 
-     * `src` : lokasi file gambar.
-     * `width` : ukuran lebar gambar (300px).
-     * `alt` : teks alternatif jika gambar tidak muncul.
-     * `title` : teks yang tampil saat mouse diarahkan ke gambar.
+     * `src` → lokasi file gambar.
+     * `width` → ukuran lebar gambar (300px).
+     * `alt` → teks alternatif jika gambar tidak muncul.
+     * `title` → teks yang tampil saat mouse diarahkan ke gambar.
 
 
- *Kesimpulan:*
 
-* File HTML ini sudah sesuai untuk praktikum dasar.
-* Struktur `<head>` dan `<body>` rapi.
-* Sudah menggunakan tag teks, link, paragraf, heading, dan gambar.
+---
+
+Mau aku bikinkan versi yang lebih menarik (misalnya ditambahkan warna background dan styling sederhana dengan CSS), atau tetap fokus pada **HTML murni** dulu?
+
 
 ---
 
@@ -141,5 +145,29 @@ title = teks yang muncul ketika kursor diarahkan ke gambar (tooltip).
 <img src="Logo-Universitas-Pelita-Bangsa.png" width="300" alt="Logo Universitas Pelita Bangsa.png" title="Logo Universitas Pelita Bangsa">
 Jika file Logo.png tidak ada, akan tampil teks Logo Universitas Pelita Bangsa. jika gambar berhasil dimuat, lalu diarahkan mouse, muncul tooltip Logo Universitas Pelita Bangsa.
 
+### 4. Untuk mengatur ukuran gambar, digunakan atribut `width` dan `height`. Agar tampilan gambar proporsional sebaiknya kedua atribut tersebut diisi semua atau tidak?
+Jawab :
+
+Tidak harus diisi semua.
+
+* Jika hanya salah satu atribut diisi (misalnya `width`), maka browser otomatis menyesuaikan yang lain agar proporsional.
+* Jika keduanya diisi dengan nilai yang tidak sesuai rasio asli gambar, maka gambar bisa tampak gepeng atau melebar.
+
+Jadi sebaiknya cukup isi salah satu (biasanya `width`) agar gambar tetap proporsional.
+
+---
+### 5. Pada link tambahkan atribut `target` dengan nilai bervariasi (`_blank`, `_self`, `_top`, `_parent`). Apa yang terjadi pada masing-masing nilai atribut tersebut?
+Jawab :
+Ini ngatur cara link dibuka:
+
+* `_blank ` → buka di tab/jendela baru.
+
+* `_self ` → buka di tab yang sama (default).
+
+* `_top ` → kalau ada frame/iframe, link langsung buka di jendela penuh (paling luar).
+
+* `_parent ` → buka link di frame induknya. Kalau nggak ada frame, sama aja kayak _self.
+
+Yang paling sering dipakai biasanya  `_blank ` biar linknya kebuka di tab baru.
 
 
