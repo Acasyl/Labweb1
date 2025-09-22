@@ -96,10 +96,6 @@
 
 
 
----
-
-Mau aku bikinkan versi yang lebih menarik (misalnya ditambahkan warna background dan styling sederhana dengan CSS), atau tetap fokus pada **HTML murni** dulu?
-
 
 ---
 
