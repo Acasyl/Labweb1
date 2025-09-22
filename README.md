@@ -1,6 +1,6 @@
 
 
- Penjelasan Struktur Kode
+## Penjelasan Struktur Kode
 
 1. Deklarasi Dokumen
 
@@ -20,12 +20,12 @@
    </head>
    ```
 
-   * `<title>` : Menentukan judul tab browser.
-   * `<meta charset="UTF-8">` : Supaya teks mendukung karakter Unicode (huruf, simbol, dll).
+   `<title>` : Menentukan judul tab browser.
+    `<meta charset="UTF-8">` : Supaya teks mendukung karakter Unicode (huruf, simbol, dll).
 
 3. *Bagian `<body>`*
 
-   * **Navigasi**
+    *Navigasi*
 
      ```html
      <nav> 
@@ -38,7 +38,7 @@
 
     Membuat menu navigasi dengan link ke halaman internal dan eksternal, lalu dipisahkan dengan garis `<hr>`.
 
-   * *Identitas Mahasiswa*
+    *Identitas Mahasiswa*
 
      ```html
      <h1>Belajar Dasar HTML</h1>
@@ -49,7 +49,7 @@
 
      Menggunakan heading `<h1>` untuk judul utama, lalu `<p>` untuk paragraf identitas.
 
-   * *Paragraf dengan format teks*
+    *Paragraf dengan format teks*
 
      ```html
      <p> 
@@ -67,7 +67,7 @@
      * `<i>` : cetak miring.
      * `<a>` : hyperlink.
 
-   * *Subjudul dan Paragraf*
+    *Subjudul dan Paragraf*
 
      ```html
      <h2>Paragraf pada HTML</h2>
@@ -76,7 +76,7 @@
 
       `<h2>` untuk subjudul, `<p>` untuk isi paragraf.
 
-   * *Subjudul + Gambar*
+    *Subjudul + Gambar*
 
      ```html
      <h3>UNIVERSITAS PELITA BANGSA </h3>
@@ -98,4 +98,48 @@
 * Sudah menggunakan tag teks, link, paragraf, heading, dan gambar.
 
 ---
+
+
+
+
+## Jawaban Pertanyaan
+
+### 1. Lakukan perubahan pada kode sesuai dengan keinginan anda, amati perubahannya. Adakah error ketika terjadi kesalahan penulisan tag?
+Jawab :
+
+Jika ada kesalahan penulisan tag HTML (misalnya `<p>` ditulis `<pp>`), browser tidak akan menampilkan error secara langsung, tetapi elemen tidak akan berfungsi sebagaimana mestinya.  
+* Contoh: `<pp>Ini teks</pp>` hanya ditampilkan sebagai teks biasa, bukan paragraf.  
+* HTML bersifat toleran (forgiving), jadi tidak muncul pesan error, tetapi hasil tampilan bisa tidak sesuai harapan.
+
+---
+
+### 2. Apa perbedaan dari tag `<p>` dengan tag `<br>`?
+Jawab :
+
+- `<p>` digunakan untuk membuat paragraf baru. Saat digunakan, otomatis memberi jarak (spasi) antar paragraf.  
+- `<br>` digunakan untuk pindah baris di dalam paragraf tanpa memberi jarak tambahan.
+
+**Contoh:**
+```html
+<p>Ini paragraf pertama.</p>
+<p>Ini paragraf kedua.</p>
+```
+Hasil: ada jarak antar paragraf.
+
+```html
+Ini baris pertama.<br>
+Ini baris kedua.
+```
+Hasil: hanya pindah baris, tanpa jarak tambahan.
+
+---
+
+### 3. Apa perbedaan atribut `title` dan `alt` pada tag `<img>`?
+Jawab : alt = teks alternatif, muncul jika gambar gagal dimuat. Juga penting untuk aksesibilitas (screen reader).
+title = teks yang muncul ketika kursor diarahkan ke gambar (tooltip).
+
+<img src="Logo-Universitas-Pelita-Bangsa.png" width="300" alt="Logo Universitas Pelita Bangsa.png" title="Logo Universitas Pelita Bangsa">
+Jika file Logo.png tidak ada, akan tampil teks Logo Universitas Pelita Bangsa. jika gambar berhasil dimuat, lalu diarahkan mouse, muncul tooltip Logo Universitas Pelita Bangsa.
+
+
 
